@@ -21,13 +21,14 @@ export default function LocaleSwitcher() {
 					>
 						<ChakraFlag
 							countryCode={locale.slice(3)}
-							svg
 							fontSize={50}
+							rounded="5px"
 							transition="all 250ms"
 							_hover={{ filter: 'grayscale(0%)' }}
 							filter={
 								activeLocale !== locale ? 'grayscale(100%)' : 'grayscale(0%)'
 							}
+							svg
 						/>
 					</Link>
 				))}
