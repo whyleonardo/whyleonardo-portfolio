@@ -20,9 +20,8 @@ export default function LocaleSwitcher() {
 						locale={locale}
 					>
 						<ChakraFlag
-							countryCode={locale.slice(3)}
 							fontSize={50}
-							rounded="5px"
+							countryCode={locale.slice(3)}
 							transition="all 250ms"
 							_hover={{ filter: 'grayscale(0%)' }}
 							filter={
