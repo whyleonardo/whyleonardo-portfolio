@@ -1,3 +1,13 @@
 {
-  "extends": ["next/core-web-vitals", "@whyleonardo/eslint-config"]
+  "extends": ["next/core-web-vitals", "@whyleonardo/eslint-config"],
+	"plugins": [
+		"chakra-ui"
+	],
+	"parser": "@typescript-eslint/parser",
+	"rules": {
+			"chakra-ui/props-order": "error",
+			"chakra-ui/props-shorthand": "error",
+			"chakra-ui/require-specific-component": "error"
+	}
+
 }
