@@ -12,7 +12,7 @@ export const Logo = () => {
 		<CodeIcon
 			transition="all 300ms"
 			_hover={{ transform: 'scale(1.1)' }}
-			size={40}
+			size={50}
 			weight="fill"
 			color={isDark ? 'gray.200' : 'gray.800'}
 		/>
