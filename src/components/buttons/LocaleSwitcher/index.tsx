@@ -6,7 +6,7 @@ import { Stack, chakra } from '@chakra-ui/react'
 
 const ChakraFlag = chakra(ReactCountryFlag)
 
-export default function LocaleSwitcher() {
+export const LocaleSwitcher = () => {
 	const router = useRouter()
 	const { locales, locale: activeLocale } = router
 
@@ -20,7 +20,7 @@ export default function LocaleSwitcher() {
 						locale={locale}
 					>
 						<ChakraFlag
-							fontSize={50}
+							fontSize={40}
 							countryCode={locale.slice(3)}
 							transition="all 250ms"
 							_hover={{ filter: 'grayscale(0%)' }}
