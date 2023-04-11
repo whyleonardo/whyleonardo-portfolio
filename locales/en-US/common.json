@@ -1,4 +1,9 @@
 {
-	"title": "Hello World!",
-	"count": "Using a variable {{count}}"
+	"sections": {
+		"home": "Home",
+		"about": "About",
+		"projects": "Projects",
+		"skills": "Skills",
+		"contact": "Contact"
+	}
 }

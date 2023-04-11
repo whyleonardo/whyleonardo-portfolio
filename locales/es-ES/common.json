@@ -1,4 +1,9 @@
 {
-	"title": "Hola Mundo!",
-	"count": "Usanda una variavel {{count}}"
+	"sections": {
+		"home": "Hogar",
+		"about": "Sobre Mi",
+		"projects": "Proyectos",
+		"skills": "Habilidades",
+		"contact": "Contacto"
+	}
 }
