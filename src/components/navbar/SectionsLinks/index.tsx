@@ -6,18 +6,32 @@ import { animation } from '@/styles/chakra-ui/animations/ActiveLink'
 import { Link } from '@chakra-ui/next-js'
 import { Stack } from '@chakra-ui/react'
 
-export const SectionsLinks = () => {
+interface SectionLinksProps {
+	onClose?: () => void
+}
+
+export const SectionsLinks = ({ onClose }: SectionLinksProps) => {
 	const { t } = useTranslation('common')
 
 	const { asPath } = useRouter()
 
 	return (
-		<Stack as="nav" direction="row" spacing="4">
+		<Stack
+			as="nav"
+			alignItems={{ base: 'start', md: undefined }}
+			justifyContent={{ base: 'center', md: undefined }}
+			direction={{ base: 'column', md: 'row' }}
+			display="flex"
+			h="full"
+			spacing={{ base: '12', md: '4' }}
+		>
 			{SECTIONS.map((section) => (
 				<Link
 					pos="relative"
 					key={section}
-					fontWeight="bold"
+					onClick={onClose}
+					fontWeight="light"
+					fontSize={{ base: '4xl', md: 'lg' }}
 					color={asPath.includes(section) ? 'brand.700' : ''}
 					transition="all 300ms"
 					href={`#${section}`}
