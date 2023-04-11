@@ -7,7 +7,7 @@ import { Stack } from '@chakra-ui/react'
 
 interface SectionLinksProps {
 	onClose?: () => void
-	activeSection: string | null
+	activeSection?: string | null
 }
 
 export const SectionsLinks = ({
