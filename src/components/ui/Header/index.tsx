@@ -2,6 +2,7 @@ import { LocaleSwitcher } from '@/components/buttons/LocaleSwitcher'
 import { ToggleTheme } from '@/components/buttons/ToggleTheme'
 import { SectionsLinks } from '@/components/navbar/SectionsLinks'
 import { Logo } from '@/components/ui/Logo'
+import { MobileMenu } from '@/components/ui/MobileMenu'
 
 import { HStack, Stack, Spacer } from '@chakra-ui/react'
 
@@ -10,15 +11,16 @@ export const Header = () => {
 		<HStack
 			as={'header'}
 			justifyContent="space-between"
+			alignSelf="end"
 			h="4rem"
 			px="2rem"
-			shadow="0px 1px 2px rgba(0,0,0,0.6)"
+			shadow="md"
 		>
 			<Stack>
 				<Logo />
 			</Stack>
 
-			<HStack spacing="4">
+			<HStack display={{ base: 'none', md: 'flex' }} spacing="4">
 				<SectionsLinks />
 
 				<Spacer mr="4" />
@@ -26,6 +28,8 @@ export const Header = () => {
 				<LocaleSwitcher />
 				<ToggleTheme />
 			</HStack>
+
+			<MobileMenu />
 		</HStack>
 	)
 }
