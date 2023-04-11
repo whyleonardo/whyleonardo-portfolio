@@ -7,7 +7,7 @@ const projectId = process.env.NEXT_PUBLIC_PROJECT_ID as string
 const clientConfig = {
 	projectId,
 	dataset: 'production',
-	apiVersion: '2023-03-07',
+	apiVersion: '2023-04-11',
 	useCdn: false
 }
 
