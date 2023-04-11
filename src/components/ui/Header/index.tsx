@@ -1,6 +1,6 @@
 import { LocaleSwitcher } from '@/components/buttons/LocaleSwitcher'
 import { ToggleTheme } from '@/components/buttons/ToggleTheme'
-import { SectionsLinks } from '@/components/navbar/SectionsLinks'
+import { SectionsLinks } from '@/components/nav/SectionsLinks'
 import { Logo } from '@/components/ui/Logo'
 import { MobileMenu } from '@/components/ui/MobileMenu'
 
