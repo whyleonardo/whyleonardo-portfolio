@@ -1,5 +1,4 @@
 import useTranslation from 'next-translate/useTranslation'
-import { useRouter } from 'next/router'
 
 import { SECTIONS } from '@/constants/sections'
 import { animation } from '@/styles/chakra-ui/animations/ActiveLink'
@@ -8,12 +7,14 @@ import { Stack } from '@chakra-ui/react'
 
 interface SectionLinksProps {
 	onClose?: () => void
+	activeSection: string | null
 }
 
-export const SectionsLinks = ({ onClose }: SectionLinksProps) => {
+export const SectionsLinks = ({
+	onClose,
+	activeSection
+}: SectionLinksProps) => {
 	const { t } = useTranslation('common')
-
-	const { asPath } = useRouter()
 
 	return (
 		<Stack
@@ -32,7 +33,7 @@ export const SectionsLinks = ({ onClose }: SectionLinksProps) => {
 					onClick={onClose}
 					fontWeight="light"
 					fontSize={{ base: '4xl', md: 'lg' }}
-					color={asPath.includes(section) ? 'brand.700' : ''}
+					color={activeSection?.includes(section) ? 'brand.700' : ''}
 					transition="all 300ms"
 					href={`#${section}`}
 					_hover={{ opacity: 0.6 }}
@@ -40,7 +41,7 @@ export const SectionsLinks = ({ onClose }: SectionLinksProps) => {
 						content: '""',
 						position: 'absolute',
 						bottom: '-5px',
-						display: asPath.includes(section) ? 'block' : 'none',
+						display: activeSection?.includes(section) ? 'block' : 'none',
 						width: '100%',
 						borderRadius: '5px',
 						height: '2px',
