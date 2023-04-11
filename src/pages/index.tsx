@@ -1,9 +1,14 @@
 // import useTranslation from 'next-translate/useTranslation'
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 
-import { Layout } from '@/layouts/Layout'
+import { TechBadge } from '@/components/ui/TechBadge'
 
-export default function Home() {
+import { Layout } from '@/layouts/Layout'
+import { Project } from '@/types/project'
+import { getProjects } from '@/utils/getProjects'
+
+export default function Home({ projects }: { projects: Project[] }) {
 	// const { t } = useTranslation('common')
 	// const count = t('count', { count: 42 })
 	// const title = t('title')
@@ -22,7 +27,24 @@ export default function Home() {
 				<p>{title}</p>
 			</Center> */}
 
+			{/* {projects.map((project) => (
+				<div key={project._id}>
+					<p>{project.title}</p>
+
+					{project.stack.map((tech) => (
+						<TechBadge key={tech._id} tech={tech} />
+					))}
+				</div>
+			))} */}
+
 			<Layout />
 		</>
 	)
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+	const projects = await getProjects()
+	return {
+		props: { projects }
+	}
 }
