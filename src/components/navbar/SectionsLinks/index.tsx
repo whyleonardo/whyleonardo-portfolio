@@ -2,7 +2,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { useRouter } from 'next/router'
 
 import { SECTIONS } from '@/constants/sections'
-import { animation } from '@/styles/chakra-ui/animations/AtiveLink'
+import { animation } from '@/styles/chakra-ui/animations/ActiveLink'
 import { Link } from '@chakra-ui/next-js'
 import { Stack } from '@chakra-ui/react'
 
