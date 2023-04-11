@@ -2,7 +2,7 @@ import { LocaleSwitcher } from '@/components/buttons/LocaleSwitcher'
 import { Github } from '@/components/buttons/Social Icons/Github'
 import { Linkedin } from '@/components/buttons/Social Icons/Linkedin'
 import { ToggleTheme } from '@/components/buttons/ToggleTheme'
-import { SectionsLinks } from '@/components/navbar/SectionsLinks'
+import { SectionsLinks } from '@/components/nav/SectionsLinks'
 
 import {
 	chakra,
