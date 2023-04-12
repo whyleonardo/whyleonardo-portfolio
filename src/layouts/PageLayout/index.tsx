@@ -6,7 +6,7 @@ import { Header } from '@/components/ui/Header'
 import { Container, Flex, Box, useColorMode } from '@chakra-ui/react'
 const inter = Inter({ subsets: ['latin'] })
 
-export const Layout = () => {
+export const PageLayout = () => {
 	const { colorMode } = useColorMode()
 	const [activeSection, setActiveSection] = useState(null)
 
@@ -39,6 +39,7 @@ export const Layout = () => {
 
 	return (
 		<Container
+			minH="100vh"
 			color={isDark ? 'brand.100' : 'brand.900'}
 			fontFamily={inter.style.fontFamily}
 			bgColor={!isDark ? 'brand.100' : 'brand.900'}
