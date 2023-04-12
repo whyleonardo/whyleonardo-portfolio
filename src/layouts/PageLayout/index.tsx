@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 
 import { Header } from '@/components/ui/Header'
 
+import { Home } from '@/layouts/Sections/Home'
 import { Container, Flex, Box, useColorMode } from '@chakra-ui/react'
 const inter = Inter({ subsets: ['latin'] })
 
@@ -45,12 +46,18 @@ export const PageLayout = () => {
 			bgColor={!isDark ? 'brand.100' : 'brand.900'}
 			scrollBehavior="smooth"
 		>
-			<Box pos="absolute" top="0" data-section="home" id="home" />
+			<Box
+				pos="absolute"
+				top="0"
+				h="calc(100vh - 4rem)"
+				data-section="home"
+				id="home"
+			/>
 
 			<Header activeSection={activeSection} />
 
-			<Flex h="calc(600px - 5rem)" border="1px">
-				Home
+			<Flex h="calc(100vh - 4rem)" border="1px">
+				<Home />
 			</Flex>
 
 			<Flex
