@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 import { TechBadge } from '@/components/ui/TechBadge'
 
-import { Layout } from '@/layouts/Layout'
+import { PageLayout } from '@/layouts/PageLayout'
 import { Project } from '@/types/project'
 import { getProjects } from '@/utils/getProjects'
 
@@ -37,7 +37,7 @@ export default function Home({ projects }: { projects: Project[] }) {
 				</div>
 			))} */}
 
-			<Layout />
+			<PageLayout />
 		</>
 	)
 }
