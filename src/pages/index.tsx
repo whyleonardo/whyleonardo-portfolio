@@ -2,16 +2,29 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 
-import { TechBadge } from '@/components/ui/TechBadge'
-
 import { PageLayout } from '@/layouts/PageLayout'
+import { personalInfoStore } from '@/store/personalInfo'
+import { projectsStore } from '@/store/projects'
+import { PersonalInfo } from '@/types/personal-info'
 import { Project } from '@/types/project'
+import { getPersonalInfo } from '@/utils/getPersonalInfo'
 import { getProjects } from '@/utils/getProjects'
+import { useHydrateAtoms } from 'jotai/utils'
 
-export default function Home({ projects }: { projects: Project[] }) {
-	// const { t } = useTranslation('common')
-	// const count = t('count', { count: 42 })
-	// const title = t('title')
+export default function Home({
+	projects,
+	personalInfo
+}: {
+	projects: Project[]
+	personalInfo: PersonalInfo
+}) {
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-ignore
+	useHydrateAtoms([[projectsStore, projects]])
+
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-ignore
+	useHydrateAtoms([[personalInfoStore, personalInfo]])
 
 	return (
 		<>
@@ -21,11 +34,6 @@ export default function Home({ projects }: { projects: Project[] }) {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
-			{/* <Center h="100vh">
-				<p>{count}</p>
-				<p>{title}</p>
-			</Center> */}
 
 			{/* {projects.map((project) => (
 				<div key={project._id}>
@@ -44,7 +52,10 @@ export default function Home({ projects }: { projects: Project[] }) {
 
 export const getStaticProps: GetStaticProps = async () => {
 	const projects = await getProjects()
+
+	const personalInfo = await getPersonalInfo()
+
 	return {
-		props: { projects }
+		props: { projects, personalInfo }
 	}
 }
