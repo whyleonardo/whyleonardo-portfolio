@@ -16,6 +16,7 @@ export const ProfilePhoto = ({ profilePhoto }: ProfilePhotoProps) => {
 			height={200}
 			alt="Profile Photo"
 			src={image}
+			priority
 		/>
 	)
 }
