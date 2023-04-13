@@ -3,8 +3,11 @@ import { useEffect, useState } from 'react'
 
 import { Header } from '@/components/ui/Header'
 
-import { Home } from '@/layouts/Sections/Home'
-import { Container, Flex, Box, useColorMode } from '@chakra-ui/react'
+import { SectionContainer } from '@/layouts/SectionContainer'
+import { HomeSection } from '@/layouts/Sections/Home'
+import { ProjectsSection } from '@/layouts/Sections/Projects'
+import { Container, Box, useColorMode, Stack } from '@chakra-ui/react'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const PageLayout = () => {
@@ -56,53 +59,27 @@ export const PageLayout = () => {
 
 			<Header activeSection={activeSection} />
 
-			<Flex h="calc(100vh - 4rem)" border="1px">
-				<Home />
-			</Flex>
+			<Stack px="2rem" spacing="10">
+				<SectionContainer section="home">
+					<HomeSection />
+				</SectionContainer>
 
-			<Flex
-				h="1600px"
-				mt="20px"
-				pt="5rem"
-				border="1px"
-				data-section="about"
-				id="about"
-			>
-				About
-			</Flex>
+				<SectionContainer section="about">
+					<p>About</p>
+				</SectionContainer>
 
-			<Flex
-				h="1600px"
-				mt="20px"
-				pt="5rem"
-				border="1px"
-				data-section="skills"
-				id="skills"
-			>
-				Skills
-			</Flex>
+				<SectionContainer section="skills">
+					<p>Skills</p>
+				</SectionContainer>
 
-			<Flex
-				h="1600px"
-				mt="20px"
-				pt="5rem"
-				border="1px"
-				data-section="projects"
-				id="projects"
-			>
-				Projects
-			</Flex>
+				<SectionContainer section="projects">
+					<ProjectsSection />
+				</SectionContainer>
 
-			<Flex
-				h="1600px"
-				mt="20px"
-				pt="5rem"
-				border="1px"
-				data-section="contact"
-				id="contact"
-			>
-				Contact
-			</Flex>
+				<SectionContainer section="contact">
+					<p>Contact</p>
+				</SectionContainer>
+			</Stack>
 		</Container>
 	)
 }
