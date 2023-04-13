@@ -25,7 +25,7 @@ export const Header = ({ activeSection }: { activeSection: string | null }) => {
 				<Logo />
 			</Stack>
 
-			<HStack display={{ base: 'none', md: 'flex' }} spacing="4">
+			<HStack display={{ base: 'none', lg: 'flex' }} spacing="4">
 				<SectionsLinks activeSection={activeSection} />
 
 				<Spacer mr="4" />

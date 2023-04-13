@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { SECTIONS } from '@/constants/sections'
 import { animation } from '@/styles/chakra-ui/animations/ActiveLink'
 import { Link } from '@chakra-ui/next-js'
-import { Stack } from '@chakra-ui/react'
+import { Stack, Button } from '@chakra-ui/react'
 
 interface SectionLinksProps {
 	onClose?: () => void
@@ -19,7 +19,7 @@ export const SectionsLinks = ({
 
 	function handleScroll(sectiont: string) {
 		const section = document.getElementById(sectiont)
-		console.log(section)
+		onClose && onClose()
 		section && section?.scrollIntoView({ behavior: 'smooth' })
 	}
 
@@ -28,40 +28,36 @@ export const SectionsLinks = ({
 			as="nav"
 			alignItems={{ base: 'start', md: undefined }}
 			justifyContent={{ base: 'center', md: undefined }}
-			direction={{ base: 'column', md: 'row' }}
+			direction={{ base: 'column', lg: 'row' }}
 			display="flex"
 			h="full"
-			spacing={{ base: '12', md: '4' }}
+			spacing={{ base: '12', lg: '4' }}
 		>
 			{SECTIONS.map((section) => (
-				// <Link
-				// 	pos="relative"
-				// 	key={section}
-				// 	onClick={onClose}
-				// 	fontWeight="light"
-				// 	fontSize={{ base: '4xl', md: 'lg' }}
-				// 	color={activeSection?.includes(section) ? 'brand.700' : ''}
-				// 	transition="all 300ms"
-				// 	href={`#${section}`}
-				// 	_hover={{ opacity: 0.6 }}
-				// 	_after={{
-				// 		content: '""',
-				// 		position: 'absolute',
-				// 		bottom: '-5px',
-				// 		display: activeSection?.includes(section) ? 'block' : 'none',
-				// 		width: '100%',
-				// 		borderRadius: '5px',
-				// 		height: '2px',
-				// 		bgColor: 'brand.700',
-				// 		animation: animation
-				// 	}}
-				// >
-				// 	{t(`sections.${section}`)}
-				// </Link>
-
-				<button key={section} onClick={() => handleScroll(section)}>
-					{section}
-				</button>
+				<Button
+					key={section}
+					pos="relative"
+					color={activeSection?.includes(section) ? 'brand.700' : ''}
+					fontSize={{ base: '4xl', lg: 'lg' }}
+					fontWeight="light"
+					bg="none"
+					_hover={{ opacity: 0.6, bg: 'none' }}
+					_after={{
+						content: '""',
+						position: 'absolute',
+						bottom: '-5px',
+						display: activeSection?.includes(section) ? 'block' : 'none',
+						width: '100%',
+						borderRadius: '5px',
+						height: '2px',
+						bgColor: 'brand.700',
+						animation: animation
+					}}
+					transition="all 300ms"
+					onClick={() => handleScroll(section)}
+				>
+					{t(`sections.${section}`)}
+				</Button>
 			))}
 		</Stack>
 	)

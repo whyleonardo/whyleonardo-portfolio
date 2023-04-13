@@ -27,7 +27,7 @@ export const MobileMenu = () => {
 	return (
 		<>
 			<IconButton
-				display={{ md: 'none' }}
+				display={{ lg: 'none' }}
 				bg="none"
 				_hover={{ bg: 'none' }}
 				aria-label="Open Mobile Menu"
@@ -47,7 +47,7 @@ export const MobileMenu = () => {
 			<Drawer isOpen={isOpen} onClose={onClose} size="full">
 				<DrawerOverlay />
 				<DrawerContent
-					display={{ md: 'none' }}
+					display={{ lg: 'none' }}
 					_dark={{ bgColor: 'brand.900' }}
 					bgColor="brand.100"
 				>
@@ -68,7 +68,7 @@ export const MobileMenu = () => {
 						</Stack>
 
 						<IconButton
-							display={{ md: 'none' }}
+							display={{ lg: 'none' }}
 							bg="none"
 							_hover={{ bg: 'none' }}
 							aria-label="Open Mobile Menu"
