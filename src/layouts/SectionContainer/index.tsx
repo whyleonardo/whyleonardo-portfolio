@@ -17,10 +17,12 @@ export const SectionContainer = ({
 
 	return (
 		<Stack
+			as={'section'}
+			alignItems="center"
+			justifyContent="center"
 			minH="100vh"
-			pt={'5rem'}
+			pt={section !== 'home' ? '5rem' : '0'}
 			pb="1rem"
-			border="1px"
 			data-section={section}
 			id={section}
 			{...rest}
