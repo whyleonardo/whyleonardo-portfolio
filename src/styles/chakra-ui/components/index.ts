@@ -1,9 +1,13 @@
-import Badge from './badge'
 import Button from './button'
+import Card from './card'
 import Drawer from './drawer'
+import Heading from './heading'
+import Tag from './tag'
 
 export const components = {
 	Button,
 	Drawer,
-	Badge
+	Card,
+	Heading,
+	Tag
 }
