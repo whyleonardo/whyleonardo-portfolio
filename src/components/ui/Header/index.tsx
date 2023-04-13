@@ -11,6 +11,7 @@ export const Header = ({ activeSection }: { activeSection: string | null }) => {
 		<HStack
 			as={'header'}
 			pos="sticky"
+			zIndex="500"
 			top="0"
 			justifyContent="space-between"
 			alignSelf="end"
