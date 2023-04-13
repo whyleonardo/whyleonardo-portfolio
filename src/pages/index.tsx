@@ -1,4 +1,3 @@
-// import useTranslation from 'next-translate/useTranslation'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 
@@ -34,16 +33,6 @@ export default function Home({
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
-			{/* {projects.map((project) => (
-				<div key={project._id}>
-					<p>{project.title}</p>
-
-					{project.stack.map((tech) => (
-						<TechBadge key={tech._id} tech={tech} />
-					))}
-				</div>
-			))} */}
 
 			<PageLayout />
 		</>
