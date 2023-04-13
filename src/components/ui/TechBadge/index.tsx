@@ -1,9 +1,10 @@
 import { Tech } from '@/types/tech'
-import { Badge } from '@chakra-ui/react'
+import { Tag, TagLabel } from '@chakra-ui/react'
 
 export const TechBadge = ({ tech }: { tech: Tech }) => {
 	return (
-		<Badge
+		<Tag
+			w="max-content"
 			mx="1"
 			fontFamily="sans-serif"
 			fontWeight="semibold"
@@ -13,7 +14,7 @@ export const TechBadge = ({ tech }: { tech: Tech }) => {
 			transition="all 300ms"
 			colorScheme={tech.color}
 		>
-			{tech.name}
-		</Badge>
+			<TagLabel>{tech.name}</TagLabel>
+		</Tag>
 	)
 }
