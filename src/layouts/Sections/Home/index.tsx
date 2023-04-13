@@ -1,9 +1,18 @@
 import { ProfilePhoto } from '@/components/ui/ProfilePhoto'
 
 import { personalInfoStore } from '@/store/personalInfo'
+import { Stack, Heading, Text } from '@chakra-ui/react'
 import { useAtom } from 'jotai'
 
-export const Home = () => {
+export const HomeSection = () => {
 	const [personalInfo] = useAtom(personalInfoStore)
-	return <ProfilePhoto profilePhoto={personalInfo?.profilePhoto} />
+	return (
+		// <Stack h="calc(100vh - 4rem)">
+		<>
+			<ProfilePhoto profilePhoto={personalInfo?.profilePhoto} />
+			<Heading>{personalInfo.name}</Heading>
+			<Text>{'Hey'}</Text>
+		</>
+		// </Stack>
+	)
 }
