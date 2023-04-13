@@ -5,5 +5,10 @@
 		"projects": "Projects",
 		"skills": "Skills",
 		"contact": "Contact"
+	},
+
+	"home-section": {
+		"developer": "Front End Developer",
+		"hello": "Say hello"
 	}
 }

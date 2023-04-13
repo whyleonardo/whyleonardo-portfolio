@@ -5,5 +5,10 @@
 		"projects": "Projetos",
 		"skills": "Habilidades",
 		"contact": "Contato"
+	},
+
+	"home-section": {
+		"developer": "Desenvolvedor Front-End",
+		"hello": "Diga olá"
 	}
 }
