@@ -1,9 +1,8 @@
 import useTranslation from 'next-translate/useTranslation'
-import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 import { SECTIONS } from '@/constants/sections'
 import { animation } from '@/styles/chakra-ui/animations/ActiveLink'
-import { Link } from '@chakra-ui/next-js'
 import { Stack, Button } from '@chakra-ui/react'
 
 interface SectionLinksProps {
@@ -16,11 +15,10 @@ export const SectionsLinks = ({
 	activeSection
 }: SectionLinksProps) => {
 	const { t } = useTranslation('common')
+	const router = useRouter()
 
-	function handleScroll(sectiont: string) {
-		const section = document.getElementById(sectiont)
-		onClose && onClose()
-		section && section?.scrollIntoView({ behavior: 'smooth' })
+	function handleScroll(section: string) {
+		router.push(`#${section}`)
 	}
 
 	return (
