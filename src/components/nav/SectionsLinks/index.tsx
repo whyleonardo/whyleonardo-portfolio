@@ -19,6 +19,7 @@ export const SectionsLinks = ({
 
 	function handleScroll(section: string) {
 		router.push(`#${section}`)
+		onClose && onClose()
 	}
 
 	return (
