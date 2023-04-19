@@ -4,7 +4,7 @@ import { SectionsLinks } from '@/components/nav/SectionsLinks'
 import { Logo } from '@/components/ui/Logo'
 import { MobileMenu } from '@/components/ui/MobileMenu'
 
-import { HStack, Stack, Spacer } from '@chakra-ui/react'
+import { HStack, Flex, Spacer } from '@chakra-ui/react'
 
 export const Header = ({ activeSection }: { activeSection: string | null }) => {
 	return (
@@ -21,9 +21,9 @@ export const Header = ({ activeSection }: { activeSection: string | null }) => {
 			_dark={{ bgColor: 'brand.900' }}
 			bgColor={'brand.100'}
 		>
-			<Stack>
+			<Flex>
 				<Logo />
-			</Stack>
+			</Flex>
 
 			<HStack display={{ base: 'none', lg: 'flex' }} spacing="4">
 				<SectionsLinks activeSection={activeSection} />
