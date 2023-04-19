@@ -1,8 +1,7 @@
 import { useRouter } from 'next/router'
 import { ReactCountryFlag } from 'react-country-flag'
 
-import { Link } from '@chakra-ui/next-js'
-import { IconButton, Stack, chakra } from '@chakra-ui/react'
+import { IconButton, Flex, chakra } from '@chakra-ui/react'
 
 const ChakraFlag = chakra(ReactCountryFlag)
 
@@ -17,7 +16,7 @@ export const LocaleSwitcher = () => {
 		})
 	}
 	return (
-		<Stack direction="row" spacing="2">
+		<Flex gap="2">
 			{locales &&
 				locales.map((locale) => (
 					<IconButton
@@ -27,7 +26,7 @@ export const LocaleSwitcher = () => {
 						aria-label={`${locale} Flag`}
 						icon={
 							<ChakraFlag
-								fontSize={40}
+								fontSize={35}
 								countryCode={locale.slice(3)}
 								transition="all 250ms"
 								_hover={{ filter: 'grayscale(0%)' }}
@@ -40,6 +39,6 @@ export const LocaleSwitcher = () => {
 						onClick={() => handleChangeLocale(locale)}
 					></IconButton>
 				))}
-		</Stack>
+		</Flex>
 	)
 }
