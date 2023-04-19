@@ -2,8 +2,9 @@ import { Inter } from 'next/font/google'
 import { useEffect, useState } from 'react'
 
 import { Header } from '@/components/ui/Header'
+import { SectionContainer } from '@/components/ui/SectionContainer'
 
-import { SectionContainer } from '@/layouts/SectionContainer'
+import { AboutSection } from '@/layouts/Sections/About'
 import { HomeSection } from '@/layouts/Sections/Home'
 import { ProjectsSection } from '@/layouts/Sections/Projects'
 import { Container, Box, useColorMode, Stack } from '@chakra-ui/react'
@@ -65,7 +66,7 @@ export const PageLayout = () => {
 				</SectionContainer>
 
 				<SectionContainer section="about">
-					<p>About</p>
+					<AboutSection />
 				</SectionContainer>
 
 				<SectionContainer section="skills">
