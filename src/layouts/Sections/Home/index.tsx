@@ -3,10 +3,9 @@ import useTranslation from 'next-translate/useTranslation'
 import { ProfilePhoto } from '@/components/ui/ProfilePhoto'
 
 import { personalInfoStore } from '@/store/personalInfo'
-import { Heading, Stack, Button, useColorMode, chakra } from '@chakra-ui/react'
+import { Heading, Flex, Button, useColorMode, chakra } from '@chakra-ui/react'
 import { NavigationArrow } from '@phosphor-icons/react'
 import { useAtom } from 'jotai'
-
 const NavigationArrowIcon = chakra(NavigationArrow)
 
 export const HomeSection = () => {
@@ -17,16 +16,15 @@ export const HomeSection = () => {
 
 	const isDark = colorMode === 'dark'
 	return (
-		<Stack
+		<Flex
 			align="center"
-			justifyContent={{ md: 'space-between' }}
-			direction={{ base: 'column', md: 'row' }}
-			gap={{ base: '4', md: '12' }}
-			px="0.5rem"
+			direction={{ base: 'column', lg: 'row' }}
+			gap={{ base: '4', lg: '12' }}
+			pt={{ lg: '5rem' }}
 		>
 			<Heading
 				display={{ base: 'block', md: 'none' }}
-				fontSize="2xl"
+				fontSize="3xl"
 				fontWeight="thin"
 				letterSpacing="wider"
 				textTransform="uppercase"
@@ -37,10 +35,10 @@ export const HomeSection = () => {
 
 			<ProfilePhoto profilePhoto={personalInfo?.profilePhoto} />
 
-			<Stack alignItems="center" spacing="6">
+			<Flex align="center" direction="column" gap="2">
 				<Heading
 					display={{ base: 'none', md: 'block' }}
-					fontSize="4xl"
+					fontSize="5xl"
 					fontWeight="thin"
 					letterSpacing="wider"
 					textTransform="uppercase"
@@ -51,10 +49,10 @@ export const HomeSection = () => {
 
 				<Heading
 					maxW="28rem"
-					mt="4"
-					fontSize="3xl"
+					fontSize="2.5rem"
 					fontWeight="light"
 					textAlign="center"
+					wordBreak="break-word"
 				>
 					{t('home-section.developer')}
 				</Heading>
@@ -64,6 +62,7 @@ export const HomeSection = () => {
 					gap="0.5rem"
 					display="flex"
 					minW="10rem"
+					mt="1rem"
 					fontWeight="bold"
 					letterSpacing="widest"
 					textTransform="uppercase"
@@ -77,9 +76,13 @@ export const HomeSection = () => {
 				>
 					{t('home-section.hello')}
 
-					<NavigationArrowIcon transform="rotate(90deg)" weight="bold" />
+					<NavigationArrowIcon
+						transform="rotate(90deg)"
+						size={20}
+						weight="bold"
+					/>
 				</Button>
-			</Stack>
-		</Stack>
+			</Flex>
+		</Flex>
 	)
 }
