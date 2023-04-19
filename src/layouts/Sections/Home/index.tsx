@@ -18,9 +18,10 @@ export const HomeSection = () => {
 	return (
 		<Flex
 			align="center"
+			justify="center"
 			direction={{ base: 'column', lg: 'row' }}
 			gap={{ base: '4', lg: '12' }}
-			pt={{ lg: '5rem' }}
+			pt="5rem"
 		>
 			<Heading
 				display={{ base: 'block', md: 'none' }}
@@ -63,6 +64,7 @@ export const HomeSection = () => {
 					display="flex"
 					minW="10rem"
 					mt="1rem"
+					p="6"
 					fontWeight="bold"
 					letterSpacing="widest"
 					textTransform="uppercase"
@@ -78,7 +80,7 @@ export const HomeSection = () => {
 
 					<NavigationArrowIcon
 						transform="rotate(90deg)"
-						size={20}
+						size={25}
 						weight="bold"
 					/>
 				</Button>
