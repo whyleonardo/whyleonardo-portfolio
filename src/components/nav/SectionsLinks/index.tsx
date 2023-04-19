@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 import { SECTIONS } from '@/constants/sections'
 import { animation } from '@/styles/chakra-ui/animations/ActiveLink'
-import { Stack, Button } from '@chakra-ui/react'
+import { Flex, Button } from '@chakra-ui/react'
 
 interface SectionLinksProps {
 	onClose?: () => void
@@ -23,14 +23,14 @@ export const SectionsLinks = ({
 	}
 
 	return (
-		<Stack
+		<Flex
 			as="nav"
-			alignItems={{ base: 'start', md: undefined }}
-			justifyContent={{ base: 'center', md: undefined }}
+			align={{ base: 'start', md: undefined }}
+			justify={{ base: 'center', md: undefined }}
 			direction={{ base: 'column', lg: 'row' }}
+			gap={{ base: '12', lg: '4' }}
 			display="flex"
 			h="full"
-			spacing={{ base: '12', lg: '4' }}
 		>
 			{SECTIONS.map((section) => (
 				<Button
@@ -58,6 +58,6 @@ export const SectionsLinks = ({
 					{t(`sections.${section}`)}
 				</Button>
 			))}
-		</Stack>
+		</Flex>
 	)
 }
