@@ -9,6 +9,11 @@
 
 	"home-section": {
 		"developer": "Desarrollador Front-End",
-		"hello": "Di hola"
+		"hello": "Vamos a conversar"
+	},
+
+	"about-section": {
+		"description": "Soy un desarrollador Front End dedicado a crear sitios web hermosos y funcionales. Tengo una sólida formación en HTML, CSS y JavaScript. También estoy familiarizado con las últimas tecnologías como React y NextJS. Siempre estoy buscando nuevos desafíos y oportunidades para aprender y crecer como desarrollador.",
+		"site-phrase": "Construyo sitios que;"
 	}
 }

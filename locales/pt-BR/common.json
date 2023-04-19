@@ -1,7 +1,7 @@
 {
 	"sections": {
 		"home": "Início",
-		"about": "Sobre",
+		"about": "Sobre Mim",
 		"projects": "Projetos",
 		"skills": "Habilidades",
 		"contact": "Contato"
@@ -9,6 +9,11 @@
 
 	"home-section": {
 		"developer": "Desenvolvedor Front-End",
-		"hello": "Diga olá"
+		"hello": "Vamos conversar"
+	},
+
+	"about-section": {
+		"description": "Sou um desenvolvedor front-end apaixonado por criar sites bonitos e funcionais. Tenho uma sólida experiência em HTML, CSS e JavaScript. Também estou familiarizado com as tecnologias mais recentes, como React e NextJS. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer como desenvolvedor.",
+		"site-phrase": "Eu construo sites que;"
 	}
 }

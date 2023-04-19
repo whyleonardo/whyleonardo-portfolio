@@ -1,7 +1,7 @@
 {
 	"sections": {
 		"home": "Home",
-		"about": "About",
+		"about": "About me",
 		"projects": "Projects",
 		"skills": "Skills",
 		"contact": "Contact"
@@ -9,6 +9,11 @@
 
 	"home-section": {
 		"developer": "Front End Developer",
-		"hello": "Say hello"
+		"hello": "Let's talk"
+	},
+
+	"about-section": {
+		"description": "I am a Front End Developer dedicated for creating beautiful and functional websites. I have a strong background in HTML, CSS, and JavaScript. I am also familiar with the latest technologies such as React and NextJS. I am always looking for new challenges and opportunities to learn and grow as a developer.",
+		"site-phrase": "I build sites that;"
 	}
 }
