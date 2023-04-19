@@ -3,44 +3,25 @@ import { Shadows_Into_Light } from 'next/font/google'
 
 import { DetailsCard } from '@/components/cards/DetailsCard'
 
-import { Text, Flex, VStack } from '@chakra-ui/react'
+import { details } from '@/constants/details'
+import { Text, VStack, StackDivider, Stack } from '@chakra-ui/react'
 
 const shadowFont = Shadows_Into_Light({ subsets: ['latin'], weight: '400' })
-
-const details = [
-	{
-		title: 'Look Professional',
-		description: 'Nice and clean design with cohesive and unique style',
-		icon: 'fire',
-		id: 'udfkdfldkm31f'
-	},
-	{
-		title: 'Are responsive',
-		description: 'Sites that work with any screen size',
-		icon: 'cellphone',
-		id: 'udfasdqwkdfldkmf'
-	},
-	{
-		title: 'Load fast!',
-		description: 'Built with full focus on performance',
-		icon: 'lighting',
-		id: 'udfkdjrkswrfldkmf'
-	}
-]
 
 export const AboutSection = () => {
 	const { t } = useTranslation('common')
 	return (
-		<VStack gap="4" py={{ base: '2rem', md: '5rem' }}>
-			<VStack gap="2">
+		<VStack>
+			<VStack gap="4" mb="2">
 				<Text
 					maxW={{ base: 'full', lg: '50%' }}
-					fontSize={{ base: 'lg', lg: 'xl' }}
+					fontSize="larger"
 					textAlign="center"
 					opacity="0.8"
 				>
-					{t('about-section.description')}{' '}
+					{t('about-section.description')}
 				</Text>
+
 				<Text
 					color="transparent"
 					fontFamily={shadowFont.style.fontFamily}
@@ -54,11 +35,30 @@ export const AboutSection = () => {
 				</Text>
 			</VStack>
 
-			<Flex border="1px">
+			<Stack
+				direction={{ base: 'column', lg: 'row' }}
+				py="1"
+				shadow="0 5px 10px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.10)"
+				_dark={{ bgColor: 'brand.800' }}
+				divider={
+					<StackDivider
+						alignSelf="center"
+						w={{ base: '80%', lg: 0 }}
+						h={{ base: 0, lg: '60%' }}
+						opacity="0.2"
+						borderColor="brand.800"
+						_dark={{
+							borderColor: 'brand.100',
+							opacity: '0.1'
+						}}
+					/>
+				}
+				rounded="10px"
+			>
 				{details.map((detail) => (
 					<DetailsCard key={detail.id} detail={detail} />
 				))}
-			</Flex>
+			</Stack>
 		</VStack>
 	)
 }
