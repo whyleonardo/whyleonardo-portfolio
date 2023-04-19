@@ -14,6 +14,18 @@
 
 	"about-section": {
 		"description": "Soy un desarrollador Front End dedicado a crear sitios web hermosos y funcionales. Tengo una sólida formación en HTML, CSS y JavaScript. También estoy familiarizado con las últimas tecnologías como React y NextJS. Siempre estoy buscando nuevos desafíos y oportunidades para aprender y crecer como desarrollador.",
-		"site-phrase": "Construyo sitios que;"
+		"site-phrase": "Construyo sitios que;",
+		"look-professional": {
+			"title": "Luce Profesional",
+			"description": "Construyo sitios que se ven profesionales y son fáciles de navegar"
+		},
+		"are-responsive": {
+			"title": "Son Receptivos",
+			"description": "Sitios que funcionan con cualquier tamaño de pantalla"
+		},
+		"load-fast": {
+			"title": "Carga Rápido",
+			"description": "Construido con un enfoque total en el rendimiento"
+		}
 	}
 }

@@ -14,6 +14,18 @@
 
 	"about-section": {
 		"description": "I am a Front End Developer dedicated for creating beautiful and functional websites. I have a strong background in HTML, CSS, and JavaScript. I am also familiar with the latest technologies such as React and NextJS. I am always looking for new challenges and opportunities to learn and grow as a developer.",
-		"site-phrase": "I build sites that;"
+		"site-phrase": "I build sites that;",
+		"look-professional": {
+				"title": "Look Professional",
+				"description": "I build sites that look professional and are easy to navigate"
+		},
+		"are-responsive": {
+			"title": "Are Responsive",
+			"description": "Sites that work with any screen size"
+		},
+		"load-fast": {
+			"title": "Load fast",
+			"description": "Built with full focus on performance"
+		}
 	}
 }
