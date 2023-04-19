@@ -14,7 +14,7 @@ import {
 	DrawerContent,
 	useDisclosure,
 	IconButton,
-	Stack
+	Flex
 } from '@chakra-ui/react'
 import { X, List } from '@phosphor-icons/react'
 
@@ -62,10 +62,10 @@ export const MobileMenu = () => {
 							<Github />
 						</Stack> */}
 
-						<Stack direction="row" spacing="8">
+						<Flex direction="row" gap="8">
 							<ToggleTheme />
 							<LocaleSwitcher />
-						</Stack>
+						</Flex>
 
 						<IconButton
 							display={{ lg: 'none' }}
