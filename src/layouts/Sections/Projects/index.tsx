@@ -9,22 +9,20 @@ import { useAtom } from 'jotai'
 export const ProjectsSection = () => {
 	const [projects] = useAtom(projectsStore)
 	return (
-		<>
-			<Grid
-				gap="4"
-				templateColumns={{
-					base: 'repeat(1, 1fr)',
-					md: 'repeat(2, 1fr)',
-					lg: 'repeat(3, 1fr)'
-				}}
-				w="full"
-				px="0.5rem"
-				py="2rem"
-			>
-				{projects.map((project) => (
-					<ProjectCard key={project._id} project={project} />
-				))}
-			</Grid>
-		</>
+		<Grid
+			gap="4"
+			templateColumns={{
+				base: 'repeat(1, 1fr)',
+				md: 'repeat(2, 1fr)',
+				lg: 'repeat(3, 1fr)'
+			}}
+			w="full"
+			px="0.5rem"
+			py="2rem"
+		>
+			{projects.map((project) => (
+				<ProjectCard key={project._id} project={project} />
+			))}
+		</Grid>
 	)
 }
