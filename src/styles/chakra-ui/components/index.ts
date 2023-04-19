@@ -1,5 +1,6 @@
 import Button from './button'
 import Card from './card'
+import Divider from './divider'
 import Drawer from './drawer'
 import Heading from './heading'
 import Tag from './tag'
@@ -9,5 +10,6 @@ export const components = {
 	Drawer,
 	Card,
 	Heading,
-	Tag
+	Tag,
+	Divider
 }
