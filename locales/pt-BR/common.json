@@ -1,10 +1,15 @@
 {
+		"page-seo": {
+			"title": "Seja bem vindo!",
+			"description": "Yes",
+			"role": "Portfólio"
+		},
+
 	"sections": {
 		"home": "Início",
 		"about": "Sobre Mim",
 		"projects": "Projetos",
-		"skills": "Habilidades",
-		"contact": "Contato"
+		"skills": "Habilidades"
 	},
 
 	"home-section": {
