@@ -1,6 +1,4 @@
 import { LocaleSwitcher } from '@/components/buttons/LocaleSwitcher'
-import { Github } from '@/components/buttons/Social Icons/Github'
-import { Linkedin } from '@/components/buttons/Social Icons/Linkedin'
 import { ToggleTheme } from '@/components/buttons/ToggleTheme'
 import { SectionsLinks } from '@/components/nav/SectionsLinks'
 
@@ -8,7 +6,6 @@ import {
 	chakra,
 	Drawer,
 	DrawerBody,
-	DrawerFooter,
 	DrawerHeader,
 	DrawerOverlay,
 	DrawerContent,
@@ -57,11 +54,6 @@ export const MobileMenu = () => {
 						display="flex"
 						shadow="sm"
 					>
-						{/* <Stack direction="row">
-							<Linkedin />
-							<Github />
-						</Stack> */}
-
 						<Flex direction="row" gap="8">
 							<ToggleTheme />
 							<LocaleSwitcher />
