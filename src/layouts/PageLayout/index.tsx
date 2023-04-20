@@ -1,13 +1,21 @@
 import { Inter } from 'next/font/google'
 import { useEffect, useState } from 'react'
 
+import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/ui/Header'
 import { SectionContainer } from '@/components/ui/SectionContainer'
 
 import { AboutSection } from '@/layouts/Sections/About'
 import { HomeSection } from '@/layouts/Sections/Home'
 import { ProjectsSection } from '@/layouts/Sections/Projects'
-import { Container, Box, useColorMode, Stack } from '@chakra-ui/react'
+import { SkillsSection } from '@/layouts/Sections/Skills'
+import {
+	Container,
+	Box,
+	useColorMode,
+	Stack,
+	StackDivider
+} from '@chakra-ui/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -60,7 +68,21 @@ export const PageLayout = () => {
 
 			<Header activeSection={activeSection} />
 
-			<Stack px="2rem" spacing="10">
+			<Stack
+				pb="5rem"
+				px="2rem"
+				divider={
+					<StackDivider
+						alignSelf="center"
+						w="90%"
+						h="2px"
+						opacity={0.1}
+						_dark={{ opacity: 0.3 }}
+						bgColor="brand.900"
+					/>
+				}
+				spacing="10"
+			>
 				<SectionContainer section="home">
 					<HomeSection />
 				</SectionContainer>
@@ -69,18 +91,15 @@ export const PageLayout = () => {
 					<AboutSection />
 				</SectionContainer>
 
-				<SectionContainer section="skills">
-					<p>Skills</p>
-				</SectionContainer>
-
 				<SectionContainer section="projects">
 					<ProjectsSection />
 				</SectionContainer>
 
-				<SectionContainer section="contact">
-					<p>Contact</p>
+				<SectionContainer section="skills">
+					<SkillsSection />
 				</SectionContainer>
 			</Stack>
+			<Footer />
 		</Container>
 	)
 }
