@@ -1,11 +1,11 @@
 import { Inter } from 'next/font/google'
 import { useEffect, useState } from 'react'
 
-import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/ui/Header'
 import { SectionContainer } from '@/components/ui/SectionContainer'
 
 import { AboutSection } from '@/layouts/Sections/About'
+import { ContactSection } from '@/layouts/Sections/Contact'
 import { HomeSection } from '@/layouts/Sections/Home'
 import { ProjectsSection } from '@/layouts/Sections/Projects'
 import { SkillsSection } from '@/layouts/Sections/Skills'
@@ -98,8 +98,11 @@ export const PageLayout = () => {
 				<SectionContainer section="skills">
 					<SkillsSection />
 				</SectionContainer>
+
+				<SectionContainer section="contact">
+					<ContactSection />
+				</SectionContainer>
 			</Stack>
-			<Footer />
 		</Container>
 	)
 }

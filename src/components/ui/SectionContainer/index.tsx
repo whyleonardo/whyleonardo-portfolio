@@ -1,16 +1,17 @@
 import useTranslation from 'next-translate/useTranslation'
 import { ReactNode } from 'react'
 
-import { Heading, Grid } from '@chakra-ui/react'
+import { Heading, Grid, GridProps } from '@chakra-ui/react'
 
-interface SectionContainerProps {
+interface SectionContainerProps extends GridProps {
 	children: ReactNode
 	section: string
 }
 
 export const SectionContainer = ({
 	children,
-	section
+	section,
+	...rest
 }: SectionContainerProps) => {
 	const { t } = useTranslation('common')
 
@@ -22,9 +23,10 @@ export const SectionContainer = ({
 		"section"
 		`}
 			minH={section === 'home' ? 'calc(100vh - 5rem)' : '100vh'}
-			pb={section === 'skills' ? 0 : '5rem'}
+			pb="5rem"
 			data-section={section}
 			id={section}
+			{...rest}
 		>
 			<Heading
 				display={section === 'home' ? 'none' : 'block'}
