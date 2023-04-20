@@ -11,7 +11,7 @@ const shadowFont = Shadows_Into_Light({ subsets: ['latin'], weight: '400' })
 export const AboutSection = () => {
 	const { t } = useTranslation('common')
 	return (
-		<VStack>
+		<VStack mt="2rem">
 			<VStack gap="4" mb="2">
 				<Text
 					maxW={{ base: 'full', lg: '50%' }}
