@@ -4,5 +4,13 @@ import { GithubLogo } from '@phosphor-icons/react'
 const GithubIcon = chakra(GithubLogo)
 
 export const Github = () => {
-	return <IconButton aria-label="Github Icon" icon={<GithubIcon />} />
+	return (
+		<IconButton
+			as="a"
+			aria-label="Github Icon"
+			href="https://github.com/whyleonardo"
+			icon={<GithubIcon />}
+			target="_blank"
+		/>
+	)
 }
