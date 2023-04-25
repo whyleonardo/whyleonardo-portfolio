@@ -1,9 +1,8 @@
 {
 
 		"page-seo": {
-			"title": "Welcome!",
-			"description": "Yes",
-			"role": "Portfolio"
+			"title": "Portfolio | Welcome!",
+			"description": "Yes"
 		},
 
 	"sections": {
@@ -34,5 +33,13 @@
 			"title": "Load fast",
 			"description": "Built with full focus on performance"
 		}
+	},
+
+	"contact-section": {
+		"title": "Just say hi.",
+		"text": "Im always open to discuss your project and talk about new things.",
+		"mail": "Mail me at:",
+		"follow": "Follow me on:"
 	}
+
 }

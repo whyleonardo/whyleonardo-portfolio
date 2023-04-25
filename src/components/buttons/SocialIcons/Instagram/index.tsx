@@ -7,9 +7,11 @@ export const Instagram = () => {
 	return (
 		<IconButton
 			as="a"
+			bg="none"
+			_hover={{ bg: 'none' }}
 			aria-label="Github Icon"
 			href="https://instagram.com/whyleonardo_"
-			icon={<InstagramIcon />}
+			icon={<InstagramIcon size={30} />}
 			target="_blank"
 		/>
 	)

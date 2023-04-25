@@ -1,8 +1,7 @@
 {
 		"page-seo": {
-			"title": "Seja bem vindo!",
-			"description": "Yes",
-			"role": "Portfólio"
+			"title": "Portfólio | Seja bem vindo!",
+			"description": "Yes"
 		},
 
 	"sections": {
@@ -33,5 +32,12 @@
 			"title": "Carregamento Rápido",
 			"description": "Construído com foco total no desempenho"
 		}
+	},
+
+	"contact-section": {
+		"title": "Diga olá.",
+		"text": "Estou sempre aberto para discutir seu projeto e falar sobre coisas novas.",
+		"mail": "Envie-me um e-mail para:",
+		"follow": "Siga-me:"
 	}
 }
