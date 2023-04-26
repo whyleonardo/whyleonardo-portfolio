@@ -1,3 +1,5 @@
+import useTranslation from 'next-translate/useTranslation'
+
 import { TechBadge } from '@/components/ui/TechBadge'
 
 import { sanityImageBuilder } from '@/services/sanity-client'
@@ -9,7 +11,8 @@ import {
 	VStack,
 	Image,
 	IconButton,
-	chakra
+	chakra,
+	Tag
 } from '@chakra-ui/react'
 import { GithubLogo, ArrowSquareOut, Folder } from '@phosphor-icons/react'
 
@@ -17,7 +20,7 @@ const ExternalLink = chakra(ArrowSquareOut)
 const Github = chakra(GithubLogo)
 
 export const ProjectCard = ({ project }: { project: Project }) => {
-	console.log(project)
+	const { t } = useTranslation('common')
 
 	const image = sanityImageBuilder.image(project.cover).url()
 	return (
@@ -37,18 +40,24 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 
 				<Flex gap="2">
 					<IconButton
+						as="a"
 						bg="none"
 						_hover={{ bg: 'none', scale: 1.1, color: 'orange.600' }}
 						transform="auto"
 						aria-label="Github Project Link"
+						href={project.github}
 						icon={<Github size={30} />}
+						target="blank"
 					/>
 					<IconButton
+						as="a"
 						bg="none"
 						_hover={{ bg: 'none', scale: 1.1, color: 'brand.600' }}
 						transform="auto"
 						aria-label="Project Page Link"
+						href={project.link}
 						icon={<ExternalLink size={30} />}
+						target="blank"
 					/>
 				</Flex>
 			</Flex>
@@ -57,7 +66,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 				<Heading size="md">{project.title}</Heading>
 			</VStack>
 
-			<Flex p="2">
+			<Flex pos="relative" p="2">
 				<Image
 					_hover={{ filter: 'grayscale(0%)' }}
 					transition="300ms ease"
@@ -66,6 +75,19 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 					rounded="10px"
 					src={image}
 				/>
+
+				{!project.isCompleted && (
+					<Tag
+						pos="absolute"
+						right="5"
+						bottom="5"
+						color="brand.700"
+						fontWeight="bold"
+						_dark={{ bg: 'brand.200', color: 'brand.900' }}
+					>
+						{t('projects-section.project-status')}
+					</Tag>
+				)}
 			</Flex>
 
 			<Flex align="center" wrap="wrap" h="20%">

@@ -35,6 +35,10 @@
 		}
 	},
 
+	"projects-section": {
+		"project-status": "Under Development"
+	},
+
 	"contact-section": {
 		"title": "Just say hi.",
 		"text": "Im always open to discuss your project and talk about new things.",

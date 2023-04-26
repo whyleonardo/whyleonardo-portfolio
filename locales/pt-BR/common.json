@@ -1,8 +1,8 @@
 {
-		"page-seo": {
-			"title": "Portfólio | Seja bem vindo!",
-			"description": "Yes"
-		},
+	"page-seo": {
+		"title": "Portfólio | Seja bem vindo!",
+		"description": "Yes"
+	},
 
 	"sections": {
 		"home": "Início",
@@ -32,6 +32,10 @@
 			"title": "Carregamento Rápido",
 			"description": "Construído com foco total no desempenho"
 		}
+	},
+
+	"projects-section": {
+		"project-status": "Em Desenvolvimento"
 	},
 
 	"contact-section": {
