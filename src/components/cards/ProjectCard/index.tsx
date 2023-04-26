@@ -1,5 +1,6 @@
 import { TechBadge } from '@/components/ui/TechBadge'
 
+import { sanityImageBuilder } from '@/services/sanity-client'
 import { Project } from '@/types/project'
 import {
 	Card,
@@ -16,6 +17,9 @@ const ExternalLink = chakra(ArrowSquareOut)
 const Github = chakra(GithubLogo)
 
 export const ProjectCard = ({ project }: { project: Project }) => {
+	console.log(project)
+
+	const image = sanityImageBuilder.image(project.cover).url()
 	return (
 		<Card
 			justifyContent="space-between"
@@ -52,6 +56,17 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 			<VStack h="100%" py="0.5rem">
 				<Heading size="md">{project.title}</Heading>
 			</VStack>
+
+			<Flex p="2">
+				<Image
+					_hover={{ filter: 'grayscale(0%)' }}
+					transition="300ms ease"
+					alt={project.title + 'cover'}
+					filter="grayscale(100%)"
+					rounded="10px"
+					src={image}
+				/>
+			</Flex>
 
 			<Flex align="center" wrap="wrap" h="20%">
 				{project.stack.map((tech) => (
