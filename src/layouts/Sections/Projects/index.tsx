@@ -8,6 +8,14 @@ import { useAtom } from 'jotai'
 
 export const ProjectsSection = () => {
 	const [projects] = useAtom(projectsStore)
+
+	const orderedProjectsByDate = projects.sort((a, b) => {
+		const dateA = new Date(a.dateWasCreated)
+		const dateB = new Date(b.dateWasCreated)
+
+		return dateB.getTime() - dateA.getTime()
+	})
+
 	return (
 		<Grid
 			gap="4"
@@ -19,7 +27,7 @@ export const ProjectsSection = () => {
 			w="full"
 			mt="2rem"
 		>
-			{projects.map((project) => (
+			{orderedProjectsByDate.map((project) => (
 				<ProjectCard key={project._id} project={project} />
 			))}
 		</Grid>
