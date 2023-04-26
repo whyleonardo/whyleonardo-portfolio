@@ -48,6 +48,7 @@ export const getStaticProps: GetStaticProps = async () => {
 	const personalInfo = await getPersonalInfo()
 
 	return {
-		props: { projects, personalInfo }
+		props: { projects, personalInfo },
+		revalidate: 86400 // 24 hours
 	}
 }
