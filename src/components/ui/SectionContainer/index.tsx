@@ -23,7 +23,7 @@ export const SectionContainer = ({
 		"section"
 		`}
 			minH={section === 'home' ? 'calc(100vh - 5rem)' : '100vh'}
-			pb="5rem"
+			// pb="5rem"
 			data-section={section}
 			id={section}
 			{...rest}

@@ -19,6 +19,7 @@ export const ContactSection = () => {
 			justify="space-between"
 			direction={{ base: 'column', lg: 'row' }}
 			p={{ lg: '20' }}
+			pb="0"
 		>
 			<VStack align="start" justify={{ lg: 'center' }} gap="5" w="full" p="8">
 				<Heading size="2xl">{t('contact-section.title')}</Heading>

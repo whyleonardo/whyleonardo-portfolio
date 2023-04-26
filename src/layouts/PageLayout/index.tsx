@@ -69,7 +69,6 @@ export const PageLayout = () => {
 			<Header activeSection={activeSection} />
 
 			<Stack
-				pb="5rem"
 				px="2rem"
 				divider={
 					<StackDivider
