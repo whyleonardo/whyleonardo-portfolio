@@ -42,6 +42,16 @@
 		"title": "Solo di hola.",
 		"text": "Siempre estoy abierto a discutir tu proyecto y hablar de cosas nuevas.",
 		"mail": "Envíame un correo a:",
-		"follow": "Sígueme en:"
+		"follow": "Sígueme en:",
+		"form": {
+			"name": "Nombre",
+			"email": "Correo electrónico",
+			"message": "Mensaje",
+			"send": "Enviar"
+		},
+		"toast": {
+			"title": "¡Enviado!",
+			"text": "Tu email ha sido enviado con éxito, en breve me pondré en contacto contigo."
+		}
 	}
 }

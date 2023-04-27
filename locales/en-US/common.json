@@ -43,7 +43,17 @@
 		"title": "Just say hi.",
 		"text": "Im always open to discuss your project and talk about new things.",
 		"mail": "Mail me at:",
-		"follow": "Follow me on:"
+		"follow": "Follow me on:",
+		"form": {
+			"name": "Name",
+			"email": "Email",
+			"message": "Message",
+			"send": "Send"
+		},
+		"toast": {
+			"title": "Sent!",
+			"text": "Your email has been sent successfully and I will contact you shortly."
+		}
 	}
 
 }

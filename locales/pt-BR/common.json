@@ -42,6 +42,16 @@
 		"title": "Diga olá.",
 		"text": "Estou sempre aberto para discutir seu projeto e falar sobre coisas novas.",
 		"mail": "Envie-me um e-mail para:",
-		"follow": "Siga-me:"
+		"follow": "Siga-me:",
+		"form": {
+			"name": "Nome",
+			"email": "Email",
+			"message": "Mensagem",
+			"send": "Enviar"
+		},
+		"toast": {
+			"title": "Enviado!",
+			"text": "O seu email foi enviado com sucesso e logo entrarei em contato com você."
+		}
 	}
 }
