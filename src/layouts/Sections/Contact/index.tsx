@@ -3,12 +3,11 @@ import useTranslation from 'next-translate/useTranslation'
 import { Github } from '@/components/buttons/SocialIcons/Github'
 import { Instagram } from '@/components/buttons/SocialIcons/Instagram'
 import { Linkedin } from '@/components/buttons/SocialIcons/Linkedin'
+import { SendEmailForm } from '@/components/form/SendEmailForm'
 
-import { animation } from '@/styles/chakra-ui/animations/ContactLogo'
-import { Flex, Text, Heading, VStack, chakra, Box } from '@chakra-ui/react'
-import { Code } from '@phosphor-icons/react'
+import { Flex, Text, Heading, VStack } from '@chakra-ui/react'
 
-const CodeIcon = chakra(Code)
+// const CodeIcon = chakra(Code)
 
 export const ContactSection = () => {
 	const { t } = useTranslation('common')
@@ -18,13 +17,13 @@ export const ContactSection = () => {
 			pos="relative"
 			justify="space-between"
 			direction={{ base: 'column', lg: 'row' }}
-			p={{ lg: '20' }}
-			pb="0"
+			p={{ lg: '18' }}
+			pb={{ base: '4', lg: '0' }}
 		>
 			<VStack align="start" justify={{ lg: 'center' }} gap="5" w="full" p="8">
 				<Heading size="2xl">{t('contact-section.title')}</Heading>
 
-				<Text w="50%" opacity="0.9">
+				<Text w={{ lg: '50%' }} opacity="0.9">
 					{t('contact-section.text')}
 				</Text>
 
@@ -51,14 +50,8 @@ export const ContactSection = () => {
 				</Flex>
 			</VStack>
 
-			<Flex
-				// align="start"
-				justify={{ lg: 'center' }}
-				display={{ base: 'none', lg: 'flex' }}
-				w="full"
-				h="full"
-			>
-				<CodeIcon size={250} animation={animation} />
+			<Flex align="center" w="full">
+				<SendEmailForm />
 			</Flex>
 		</Flex>
 	)
