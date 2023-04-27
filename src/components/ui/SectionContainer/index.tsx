@@ -17,9 +17,9 @@ export const SectionContainer = ({
 
 	return (
 		<Grid
-			gap="2"
 			templateAreas={`
 		"h2"
+		"section"
 		"section"
 		`}
 			minH={section === 'home' ? 'calc(100vh - 5rem)' : '100vh'}
