@@ -17,7 +17,7 @@ export const SendEmailToast = ({ onClose }: { onClose: () => void }) => {
 	return (
 		<VStack
 			align="start"
-			w="25rem"
+			w={{ lg: '25rem' }}
 			p="4"
 			bg="white"
 			borderTop="4px"
