@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 
 import { SendEmailToast } from '@/components/toast/SendEmailToast'
 
+import { sendEmailJs } from '@/services/emailjs'
 import {
 	Flex,
 	FormErrorMessage,
@@ -26,7 +27,7 @@ const sendEmailFormSchema = z.object({
 		.nonempty('Message is required')
 })
 
-type SendEmailFormData = z.infer<typeof sendEmailFormSchema>
+export type SendEmailFormData = z.infer<typeof sendEmailFormSchema>
 
 export const SendEmailForm = () => {
 	const { t } = useTranslation('common')
@@ -36,21 +37,24 @@ export const SendEmailForm = () => {
 	const {
 		handleSubmit,
 		register,
+		resetField,
 		formState: { errors, isSubmitting }
 	} = useForm<SendEmailFormData>({
 		resolver: zodResolver(sendEmailFormSchema)
 	})
 
 	function sendEmail(data: SendEmailFormData) {
-		console.log(data)
+		sendEmailJs(data).then(() => {
+			toast({
+				status: 'success',
+				duration: 3000,
+				position: 'top-right',
+				render: ({ onClose }) => <SendEmailToast onClose={onClose} />
+			})
 
-		toast({
-			title: t('contact-section.toast.title'),
-			description: t('contact-section.toast.text'),
-			status: 'success',
-			duration: 3000,
-			position: 'top-right',
-			render: ({ onClose }) => <SendEmailToast onClose={onClose} />
+			// resetField('name')
+			// resetField('email')
+			// resetField('message')
 		})
 	}
 
