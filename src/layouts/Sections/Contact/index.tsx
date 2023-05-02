@@ -7,8 +7,6 @@ import { SendEmailForm } from '@/components/form/SendEmailForm'
 
 import { Flex, Text, Heading, VStack } from '@chakra-ui/react'
 
-// const CodeIcon = chakra(Code)
-
 export const ContactSection = () => {
 	const { t } = useTranslation('common')
 
@@ -31,8 +29,6 @@ export const ContactSection = () => {
 					direction={{ base: 'column', lg: 'row' }}
 					gap={{ base: '5', lg: '10' }}
 				>
-
-
 					<VStack align="start">
 						<Text as="strong">{t('contact-section.follow')}</Text>
 

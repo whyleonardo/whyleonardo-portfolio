@@ -1,6 +1,9 @@
+import { techs } from '@/constants/techs'
 import { Flex, Heading, chakra } from '@chakra-ui/react'
 
-export const TechCard = ({ tech }: { tech: any }) => {
+type TechCardProps = (typeof techs)[0]
+
+export const TechCard = ({ tech }: { tech: TechCardProps }) => {
 	const Icon = chakra(tech.icon)
 
 	return (

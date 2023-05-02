@@ -1,8 +1,11 @@
 import useTranslation from 'next-translate/useTranslation'
 
+import { details } from '@/constants/details'
 import { Heading, Text, VStack, Box, chakra, Flex } from '@chakra-ui/react'
 
-export const DetailsCard = ({ detail }: { detail: any }) => {
+type DetailsCardProps = (typeof details)[0]
+
+export const DetailsCard = ({ detail }: { detail: DetailsCardProps }) => {
 	const { t } = useTranslation('common')
 
 	const Icon = chakra(detail.icon)

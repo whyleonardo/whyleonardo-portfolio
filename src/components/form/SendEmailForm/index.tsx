@@ -52,9 +52,9 @@ export const SendEmailForm = () => {
 				render: ({ onClose }) => <SendEmailToast onClose={onClose} />
 			})
 
-			// resetField('name')
-			// resetField('email')
-			// resetField('message')
+			resetField('name')
+			resetField('email')
+			resetField('message')
 		})
 	}
 
