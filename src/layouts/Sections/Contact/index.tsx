@@ -31,12 +31,7 @@ export const ContactSection = () => {
 					direction={{ base: 'column', lg: 'row' }}
 					gap={{ base: '5', lg: '10' }}
 				>
-					<VStack align="start">
-						<Text as="strong">{t('contact-section.mail')}</Text>
-						<Text pt="1" fontSize="lg" opacity="0.9">
-							christian.batista216@gmail.com
-						</Text>
-					</VStack>
+
 
 					<VStack align="start">
 						<Text as="strong">{t('contact-section.follow')}</Text>
