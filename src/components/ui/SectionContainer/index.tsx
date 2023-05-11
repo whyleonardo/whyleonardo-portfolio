@@ -23,7 +23,14 @@ export const SectionContainer = ({
 		"section"
 		`}
 			minH={section === 'home' ? 'calc(100vh - 5rem)' : '100vh'}
-			// pb="5rem"
+			data-aos="fade-in"
+			data-aos-anchor-placement="top-center"
+			data-aos-delay="50"
+			data-aos-duration="1000"
+			data-aos-easing="ease-in-out"
+			data-aos-mirror="true"
+			data-aos-offset="200"
+			data-aos-once="false"
 			data-section={section}
 			id={section}
 			{...rest}
